@@ -26,14 +26,3 @@ modalBtnClose.addEventListener('click', function () {
   modal.classList.toggle('active');
 });
 
-const express = require('express');
-const app = express();
-
-app.get('/vecchio-percorso', (req, res) => {
-  // Effettua una redirezione permanente (301) al nuovo percorso
-  res.redirect(301, '/www.webstudio.com');
-});
-
-app.listen(3000, () => {
-  console.log('Server in ascolto sulla porta 3000');
-});
