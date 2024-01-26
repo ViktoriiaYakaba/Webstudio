@@ -1,9 +1,9 @@
-let menuBtn = document.querySelector('.btn-menu');
-let menuBtnClose = document.querySelector('.btn-esc');
-let menu = document.querySelector('.mob-menu');
+const  menuBtn = document.querySelector('.btn-menu');
+const menuBtnClose = document.querySelector('.btn-esc');
+const menu = document.querySelector('.mob-menu');
 
 
-menuBtn.addEventListener('click', function () {
+  menuBtn.addEventListener('click', function () {
   menuBtn.classList.toggle('active');
   menu.classList.toggle('active');
 });
@@ -12,12 +12,9 @@ menuBtnClose.addEventListener('click', function () {
   menu.classList.toggle('active');
 });
 
-
-
-
- let modalBtn = document.querySelector('.button');
-let modalBtnClose = document.querySelector('.btn-esc-modal');
-let modal = document.querySelector('.backdrop');
+const modalBtn = document.querySelector('.button');
+const modalBtnClose = document.querySelector('.btn-esc-modal');
+const modal = document.querySelector('.backdrop');
 
 
 modalBtn.addEventListener('click', function () {
@@ -27,4 +24,16 @@ modalBtn.addEventListener('click', function () {
 modalBtnClose.addEventListener('click', function () {
   modalBtnClose.classList.toggle('active');
   modal.classList.toggle('active');
+});
+
+const express = require('express');
+const app = express();
+
+app.get('/vecchio-percorso', (req, res) => {
+  // Effettua una redirezione permanente (301) al nuovo percorso
+  res.redirect(301, '/www.webstudio.com');
+});
+
+app.listen(3000, () => {
+  console.log('Server in ascolto sulla porta 3000');
 });
